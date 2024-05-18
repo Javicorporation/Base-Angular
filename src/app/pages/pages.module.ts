@@ -7,17 +7,18 @@ import { HomeComponent } from './home/home.component';
 
 
 
-
 @NgModule({
   declarations: [
     HomeComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    
   ],
   exports: [
     HomeComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    
 
   ],
   imports: [

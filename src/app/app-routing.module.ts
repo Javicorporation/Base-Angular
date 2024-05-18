@@ -5,6 +5,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { HomeComponent } from './pages/home/home.component';
 
 
+
 const routes: Routes = [
 
   {
@@ -20,17 +21,18 @@ const routes: Routes = [
     component: ContactComponent
   },
   {
-    path: '**',
-    redirectTo: 'home'
-  },
-  {
     path:'posts',
     loadChildren: () => import('./pages/posts/posts.module').then(m => m.PostsModule)
+  },
+  {
+    path: '**',
+    redirectTo: 'home'
   }
 
 ];
 
 @NgModule({
+  declarations:[],//
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
